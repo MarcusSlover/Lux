@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "lux",
+  "version": "${version}",
+  "name": "Lux",
+  "description": "A set of tools used for programming Minecraft mods in Kotlin.",
+  "authors": [
+    "MarcusSlover"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/lux/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "com.marcusslover.lux.LuxMod"
+      }
+    ]
+  },
+  "mixins": [
+    "lux.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=17",
+    "fabric-language-kotlin": ">=${fabric_kotlin_version}"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
